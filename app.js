@@ -4,7 +4,9 @@ const graphqlHTTP = require('express-graphql');
 const schema = require('./graphql-schema/schema'); // Links our schema for grapql server
 const mongoose = require('mongoose'); // importing our ORM
 const cors = require('cors');
+const path = require('path'); 
 const app = express();
+
 
 // Allow CORS
 app.use(cors());
