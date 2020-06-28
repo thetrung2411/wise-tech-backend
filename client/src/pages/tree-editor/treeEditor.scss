@@ -1,0 +1,65 @@
+@import '../../styles/ui-misc';
+
+.treeEditor {
+    overflow: hidden;
+    height: 100%;
+
+    &-canvas {
+        height: 100%;
+        width: 100%;
+    }
+
+    &-formWrapper {
+        margin: 100px auto;
+    }
+}
+
+.node {
+    stroke: #000;
+    stroke-width: 1;
+}
+
+.link {
+    stroke: #000;
+    fill: none;
+}
+
+.descriptionNode {
+    stroke: #000;
+    stroke-width: 1;
+}
+
+.tacticsNode {
+    stroke: #000;
+    stroke-width: 1;
+}
+
+.labelText {
+    cursor: pointer;
+    height: 100%;
+    line-height: 1.4;
+    overflow: hidden;
+    padding: $spacing-ui-xSmall $spacing-ui-xSmall 0;
+    text-align: center;
+}
+
+.tacticsText {
+    cursor: pointer;
+    height: 100%;
+    line-height: 1.4;
+    max-height: 135px;
+    overflow: hidden;
+    padding: 0 $spacing-ui-xSmall;
+    white-space: pre-line;
+    z-index: 999;
+}
+
+.descriptionText {
+    cursor: pointer;
+    height: 100%;
+    line-height: 1.4;
+    max-height: 135px;
+    overflow: hidden;
+    padding: 0 $spacing-ui-xSmall;
+    white-space: pre-line;
+}

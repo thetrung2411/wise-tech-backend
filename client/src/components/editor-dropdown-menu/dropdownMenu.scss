@@ -1,0 +1,29 @@
+@import '../../styles/ui-colors';
+@import '../../styles/ui-misc';
+@import '../../styles/ui-text';
+
+.dropdown {
+    background-color: #fff;
+    border: 1px solid #000;
+    height: 100%;
+
+    &-option {
+        width: 100%;
+        background-color: #fff;
+        padding: $spacing-ui-xxSmall $spacing-ui-medium;
+        font-size: $fontSize-button;
+        font-weight: 700;
+        height: 40px;
+
+        &:hover {
+            background-color: $color-brand-3;
+            color: $color-neutral-1;
+        }
+
+        &--delete {
+            &:hover {
+                background-color: $color-neutral-4;
+            }
+        }
+    }
+}
