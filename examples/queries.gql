@@ -1,0 +1,11 @@
+# Example Query for finding all notes
+query {
+    allNodes {
+        id
+        name
+        lastUpdated
+        description
+        status
+        isRoot
+    }
+}

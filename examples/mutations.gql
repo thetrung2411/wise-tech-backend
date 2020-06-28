@@ -1,0 +1,44 @@
+# Example addRoot mutation
+mutation createRootNode {
+    createRootNode(name: "Minh's Mighty Meican Maca Root") {
+        treeId
+        id
+        parentId
+        lastUpdated
+    }
+}
+
+# TreeId is optional
+mutation CreatChildNode {
+    createChildNode(
+        parentId: "5ecddcafb6f7531c6c5bb8eb"
+        treeId: "5ecddcafb6f7531c6c5bb321"
+        name: "Minh's Chilli Branch"
+        entityType: injection
+    ) {
+        id
+        name
+        childrenIds
+        status
+        lastUpdated
+        parentId
+    }
+}
+
+mutation updateNodeAttributes {
+    updateNodeAttributes(id: "5ecf18c41e7c1d1da884f648", name: "Minh's Leaf 2 New Name") {
+        name
+        parentId
+        treeId
+        lastUpdated
+        id
+    }
+}
+
+mutation deleteNodeRecursive {
+    deleteNodeAndAllChildren(id: "5ecf38d184891929b49f1e4f") {
+        id
+        name
+        lastUpdated
+    }
+}
