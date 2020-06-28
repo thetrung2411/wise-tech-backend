@@ -35,7 +35,7 @@ mongoose
             res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
         })  
         app.listen(5000, () => {
-            console.log('now listening for requests on port 4000');
+            console.log('now listening for requests on port 5000');
         });
     })
     .catch(err => {
