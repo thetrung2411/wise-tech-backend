@@ -8,6 +8,6 @@ RUN npm install
 
 COPY . /root/api/wtg-backendV2
 
-EXPOSE 4000
+EXPOSE 5000
 
 CMD node app.js 

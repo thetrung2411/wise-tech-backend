@@ -21,9 +21,6 @@ mongoose
     .then(() => {
         console.log('connected to database');
         // To change the host port, edit the next line
-        app.listen(4000, () => {
-            console.log('now listening for requests on port 4000');
-        });
         app.use(
             '/graphql',
             graphqlHTTP({
@@ -31,6 +28,13 @@ mongoose
                 graphiql: true,
             })
         );
+        app.use(express.static('public'));
+        app.get('*', (req, res) => {
+            res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+        })  
+        app.listen(5000, () => {
+            console.log('now listening for requests on port 4000');
+        });
     })
     .catch(err => {
         console.log(err);

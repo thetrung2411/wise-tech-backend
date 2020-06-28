@@ -26,12 +26,8 @@
     },
     "scripts": {
         "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "lint": "eslint ./src/**.js"
-    },
-    "eslintConfig": {
-        "extends": ".eslintrc"
+        "build": "react-scripts build && mv build ../public ",
+        "test": "react-scripts test" 
     },
     "browserslist": {
         "production": [
@@ -44,5 +40,6 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
-    }
+    },
+    "proxy": "http://localhost:5000/"
 }
