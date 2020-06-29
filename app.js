@@ -18,7 +18,7 @@ mongoose.set('useUnifiedTopology', true);
 mongoose
     // To change the database connection, edit the next line
     .connect(
-        'mongodb+srv://thetrung2411:mr0royal@cluster0-2spqi.mongodb.net/Cluster0?retryWrites=true&w=majority'
+        'mongodb://wisetreedb:YYJeIbXnVwn7nAPWdN1jfmT9e2LZRm9vpxHDz3GWpqclHWMGd2g00ZHxhcAj8vv6COhMuxqFYM6SiHuLnCJLvA==@wisetreedb.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@wisetreedb@'
     )
     .then(() => {
        
