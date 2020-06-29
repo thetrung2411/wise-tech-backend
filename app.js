@@ -21,8 +21,10 @@ mongoose
         'mongodb+srv://thetrung2411:mr0royal@cluster0-2spqi.mongodb.net/Cluster0?retryWrites=true&w=majority'
     )
     .then(() => {
+       
         console.log('connected to database');
         // To change the host port, edit the next line
+        
         app.use(
             '/graphql',
             graphqlHTTP({
@@ -30,13 +32,14 @@ mongoose
                 graphiql: true,
             })
         );
-        app.use(express.static('public'));
-        app.get('*', (req, res) => {
-            res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
-        })  
+        // app.use(express.static('public'));
+        // app.get('*', (req, res) => {
+        //     res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+        // }) 
         app.listen(PORT, () => {
             console.log('now listening for requests on port 5000');
-        });
+        }); 
+       
     })
     .catch(err => {
         console.log(err);
