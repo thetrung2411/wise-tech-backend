@@ -6,7 +6,7 @@ const mongoose = require('mongoose'); // importing our ORM
 const cors = require('cors');
 const path = require('path'); 
 const app = express();
-
+const password = require('./secret')
 const PORT = process.env.PORT || 5000;
 // Allow CORS
 app.use(cors());
@@ -18,7 +18,7 @@ mongoose.set('useUnifiedTopology', true);
 mongoose
     // To change the database connection, edit the next line
     .connect(
-        'mongodb+srv://thetrung2411:mr0royal@cluster0-2spqi.mongodb.net/Cluster0?retryWrites=true&w=majority'
+        `mongodb+srv://thetrung2411:${password}@cluster0-2spqi.mongodb.net/Cluster0?retryWrites=true&w=majority`
     )
     .then(() => {
        
